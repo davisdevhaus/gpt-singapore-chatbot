@@ -11,7 +11,7 @@ import { DirectoryLoader } from 'langchain/document_loaders/fs/directory';
 */
 const filePath = 'docs';
 
-export const run = async () => {
+export const ingestData = async () => {
   try {
     /*load raw docs from the all files in the directory */
     const directoryLoader = new DirectoryLoader(filePath, {
@@ -48,6 +48,6 @@ export const run = async () => {
 };
 
 (async () => {
-  await run();
+  await ingestData();
   console.log('ingestion complete');
 })();
