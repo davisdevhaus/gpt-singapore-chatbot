@@ -44,9 +44,7 @@ export default function Home() {
   //handle form submission
   async function handleSubmit(e: any) {
     e.preventDefault();
-
     setError(null);
-
     if (!query) {
       alert('Please input a question');
       return;
